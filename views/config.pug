@@ -1,0 +1,19 @@
+extends layout
+block content
+  .main.container
+    .row
+        .col-xs-12
+        h1.display-4.m-b-2 Config Settings
+
+        // register form
+        form(method='POST' action='/')
+          div.form-group
+            label(for='name') VEHICLE ID
+            input#name.form-control(type='text', name='vid')
+          div.form-group
+            label(for='hubcs') VEHICLE LOCATION
+            input#favoriteBook.form-control(type='text', name='vil')
+          div.form-group
+            label(for='hubcs') ANOTHER VEHICLE PROPERTY
+            input#favoriteBook.form-control(type='text', name='avp')
+          button.btn.btn-primary(type='submit') Submit
