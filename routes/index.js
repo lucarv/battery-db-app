@@ -1,7 +1,7 @@
 const express = require('express');
 const router = express.Router();
 const axios = require('axios')
-const baseURL = 'https://batteries.azure-api.net/api/'
+const url = process.env.URL
 
 /* GET home page. */
 router.get('/', function (req, res, next) {
@@ -12,7 +12,7 @@ router.get('/', function (req, res, next) {
 
 router.post('/', function (req, res, next) {
 
-  axios.post(baseURL + process.env.API, req.body)
+  axios.post(url, req.body)
     .then(function (response) {
       console.log(response.status);
     })
